@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title 卖零食的小姑凉
+    if locals.NODE_ENV === "production"
+      link(rel="stylesheet", href="//127.0.0.1:8080/liteshop.css")
+  body
+    div#root
+    if locals.NODE_ENV !== "production"
+      script(src="//127.0.0.1:8080/liteshop.js")

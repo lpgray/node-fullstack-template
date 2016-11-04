@@ -3,7 +3,10 @@ const Jade = require('koa-jade');
 const route = require('koa-route');
 const app = koa();
 const jade = new Jade({
-  viewPath: './src/views'
+  viewPath: './views',
+  locals: {
+    NODE_ENV: process.env.NODE_ENV
+  }
 });
 
 jade.use(app);
