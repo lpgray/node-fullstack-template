@@ -1,0 +1,15 @@
+{
+  "name": "liteshop",
+  "version": "0.1.0",
+  "description": "简单的店",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lpgray",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^1.2.4",
+    "koa-jade": "^2.1.0"
+  }
+}
