@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "build-client": "NODE_ENV=production webpack --config webpack.config.production.js",
-    "develop": "webpack-dev-server --inline --hot"
+    "dev-client": "webpack-dev-server --inline --hot"
   },
   "author": "lpgray",
   "license": "MIT",
