@@ -2,6 +2,7 @@ const koa = require('koa');
 const Jade = require('koa-jade');
 const app = koa();
 const mongoose = require('mongoose');
+const body = require('koa-better-body');
 const config = require('./server/config');
 const package = require('./package');
 
@@ -42,10 +43,11 @@ router
       this.body = user;
     }
   })
-  .post('/register', function *(){
+  .post('/register', body(), function *(){
+    const reqFields = this.request.fields;
     const newUser = new User({
-      username: this.query.username,
-      password: this.query.password
+      username: reqFields.username,
+      password: reqFields.password
     });
     try {
       this.body = yield newUser.save();
