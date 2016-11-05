@@ -5,6 +5,9 @@ html
     if locals.NODE_ENV === "production"
       link(rel="stylesheet", href="//127.0.0.1:8080/liteshop.css")
   body
-    div#root
-    if locals.NODE_ENV !== "production"
+    div#root Hello, #{name} #{VERSION}
+    a(href="/login?username=admin") 登录
+    a(href="/register") 注册一个账户
+    a(href="/others") 测试404
+    if locals.NODE_ENV === "production"
       script(src="//127.0.0.1:8080/liteshop.js")
